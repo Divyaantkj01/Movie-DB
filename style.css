@@ -114,3 +114,11 @@ main {
 .movie:hover .overview{
     transform: translateY(0);
 }
+
+a{
+  text-decoration: none;
+}
+
+button{
+  margin-left: 1180px;
+}
