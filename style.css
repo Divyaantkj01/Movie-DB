@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9,12 +10,12 @@ body {
   margin: 0;
 }
 
-.home{
+.home {
   color: white;
   margin-left: 35px;
 }
 
-.home-page{
+.home-page {
   text-decoration: none;
   color: white;
 }
@@ -23,7 +24,7 @@ header {
   border-bottom: 1px solid #e2e8f0;
   padding: 1rem;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   background: #001e36;
 }
 
@@ -41,8 +42,8 @@ header {
   outline: none;
 }
 
-.search::placeholder{
-    color: white;
+.search::placeholder {
+  color: white;
 }
 
 main {
@@ -51,12 +52,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 25px;
-  
+  overflow: auto;
 }
 
 .movie {
   width: 300px;
-  
+
   margin: 1rem;
   background-color: #1d3548;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -69,56 +70,75 @@ main {
   width: 100%;
 }
 
-.movie-info{
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
 }
 
-.movie-info h3{
-    margin-top: 0;
+.movie-info h3 {
+  margin-top: 0;
 }
 
-.movie-info span{
-    background-color: #001e36;
-    padding: 0 0.25rem 0.5rem;
-    border-radius: 3px;
-    font-weight: bold;
+.movie-info span {
+  background-color: #001e36;
+  padding: 0 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
-.movie-info span.green{
-    color: lightgreen;
+.movie-info span.green {
+  color: lightgreen;
 }
-.movie-info span.orange{
-    color: orange;
+.movie-info span.orange {
+  color: orange;
 }
-.movie-info span.red{
-    color: red;
-}
-
-.overview{
-    background-color: white;
-    padding: 2rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    max-height: 100%;
-    transform: translateY(101%);
-    transition: transform 0.3s ease-in;
+.movie-info span.red {
+  color: red;
 }
 
-.movie:hover .overview{
-    transform: translateY(0);
+.overview {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
 }
 
-a{
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+a {
   text-decoration: none;
 }
 
-button{
-  margin-left: 1180px;
+button {
+  width: 100%;
+  font-size: medium;
+  text-align: center;
+  font-family: inherit;
+  padding: 0.25rem;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00ebfc);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #0066ff);
+  border-radius: 6px;
 }
