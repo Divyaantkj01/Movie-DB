@@ -34,7 +34,7 @@ function showMovies(movies) {
                 alt="${title}">
             <div class="movie-info">
                 <h3>${title}</h3>
-                <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+                <span class="fa fa-star-o ${getClassByRate(vote_average)}" style="padding-top: 7px; letter-spacing: 1px;">${vote_average}</span>
             </div>
             <div class="overview">
                 <h3>Overview</h3>
